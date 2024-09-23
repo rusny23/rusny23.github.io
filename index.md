@@ -4,7 +4,6 @@
 
 title: 
 layout: page
-permalink: https://rusny23.github.io
 ---
 # I'm Rusny Rahman.
 
