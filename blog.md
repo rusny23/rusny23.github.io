@@ -6,7 +6,7 @@ permalink: /blog
 
 --
 <ul>
-    {%for posts in site.posts}
+    {% for post in site.posts %}
     {% unless post.draft == true or post.series %}
     <li class="post-item">
         <a class="post-title" href="{{ post.url }}"><span>{{ post.title }}</span></a>
