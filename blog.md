@@ -1,10 +1,10 @@
--- 
+---
 title: Blog
 layout: page
 blog_index: true
 permalink: /blog
 
---
+---
 <ul>
     {% for post in site.posts %}
     {% unless post.draft == true or post.series %}
