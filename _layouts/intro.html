@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include seo.md %}
+    {% include css.md %}
+    <link rel="alternate" type="application/rss+xml" title="Blog" href="{{ site.url }}/feed.xml" />
+  </head>
+  <body>
+    <div class="full-page">
+        <div class="left-side">
+            <img src="assets/img/rusny.jpg" alt="Rusny" class="profile-image">
+        </div>
+        <div class="pagecontents">
+            {% include navbar.md %}
+            <h1 class="page-title">{{ page.title }}</h1>
+            <div class="container">
+                {{ content }}
+            </div>
+            {% include footer.md %}
+        </div>
+        <div class="right-side"></div>
+    </div>
+  </body>
+</html>
