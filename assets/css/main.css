@@ -1,22 +1,68 @@
 body {
-    font-family: serif;
+  font-family: Andale Mono;
 }
+
+div.full-page {
+  display: flex;
+  max-width: 100%;
+}
+
+.profile-image {
+  width: 100px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 90px 0px 0px 0px
+}
+
+div.left-side {
+  flex: 1;
+  display: flex; 
+  justify-content: flex-end; 
+  align-items: flex-start; 
+}
+
+div.right-side {
+  flex: 1;
+}
+
 div.pagecontents {
-    margin: 30px auto 0px auto;
+  margin: 30px 15px;
 }
-div.pagecontents p, div.pagecontents li {
-    line-height: 1.2;
-    font-size: 16px;
+
+div.pagecontents p, div.pagecontents li, div.blogcontents p, div.blogcontents li {
+  line-height: 1.2;
+  font-size: 16px;
 }
-div.pagecontents, code, pre {
-    max-width: 650px;
+
+div.pagecontents, div.blogcontents, code, pre {
+  max-width: 650px;
 }
+
+div.blogcontents {
+  margin: 30px auto 0px auto;
+}
+
 div.navbar {
-    display: inline-block;
-    padding: 10px;
-    /* Thanks, oilshell.org, for inspiration. */
-    background-color: #DEE;
+  display: inline-block;
+  padding: 10px;
+  /* Thanks, oilshell.org, for inspiration. */
+  background-color: #DEE;
 }
+
+.info-container {
+  width: 100%; /* Full width of the container */
+}
+
+.info-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px; /* Space between rows */
+}
+
+.right-text {
+  white-space: nowrap; /* Keeps the right text in one line */
+}
+
 li.post-item {
     display: table;
     width: 100%;
@@ -51,12 +97,17 @@ pre {
     display: inline-block;
     text-decoration: none;
 }
+
+.infotitle{
+  color: gray;
+}
+
 footer hr {
     margin-top: 40px;
 }
 /* Inline code */
 code.highlighter-rouge {
-    color: green;
+    color: rgb(246, 144, 161);
 }
 table {
   margin: 15px 0;
@@ -100,16 +151,16 @@ sub {
 @media (prefers-color-scheme: dark) {
   body {
     color: #dfdfdf;
-    background: #101010;
+    background: #0d0e15;
   }
   div.navbar {
     background-color: #212121;
   }
   a[href] {
-    color: #9e9eff;
+    color: #ffffff;
   }
   a[href]:visited {
-    color: #bebedf;
+    color: #c2c2c2;
   }
   code.highlighter-rouge {
     color: #fe8019;
