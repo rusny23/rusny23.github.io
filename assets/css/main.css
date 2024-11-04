@@ -190,7 +190,7 @@ img.post-inline-image {
 div.post-co-authors {
     padding-top: 10px;
 }
-/* TODO(max): See https://alexwlchan.net/2021/10/console-copying/ to disable
+/* TODO: See https://alexwlchan.net/2021/10/console-copying/ to disable
  * prompt selection in console blocks */
 
 /* Begin: display a small horizontal bar before footnote elements if they
@@ -222,4 +222,45 @@ a.footnote:after {
 }
 figure object.svg {
   max-width: 100%;
+}
+
+/*stuff for project pages*/
+
+/*stuff for work section*/
+.col-25 {
+  width: 20%;
+  float: left;
+  margin-top: 6px;
+}
+
+.col-75 {
+  width: 80%;
+  float: left;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.past-text {
+  color: #3283ef;
+}
+
+.current-text {
+  color: #35d839;
+}
+
+h2 + .row {
+  margin-top: 20px; /* Adds space above the row div, only if it directly follows an h2 */
+}
+
+.content-divider {
+  border: 0;              
+  height: 1px;                
+  background-color: #33383b;   
+  width: 15%;  
+  margin: 25px 0 25px 0;                       
 }

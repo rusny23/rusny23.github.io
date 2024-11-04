@@ -18,12 +18,44 @@ layout: intro
 I'm Rusny (pronounced Ruh-shni), welcome to my blog. I am a [programmer](https://github.com/rusny23)
 who likes to read books, listen to new music, and explore NYC. I recently
 graduated from Tufts University in May of 2024 with a Bachelor's degree in 
-Computer Science and a minor in Engineering Management. I am interested in
-application developement, fullstack web developement, and embedded software.
+Computer Science with a minor in Engineering Management. I am interested in
+cyber security, embedded software, backend web development, and application development.
 
-You can [email me](mailto:rusnyrahman@gmail.com) if you desire. I'm
-happy to talk about anything.
+<p style="margin-bottom: 40px;">You can <a href="mailto:rusnyrahman@gmail.com">email me</a> if you desire. I'm happy to talk about anything.</p>
 
 
 <h2 style="background-color: #2D2F31; display: inline; padding: 2px 5px;">Work</h2>
+
+<div class = "row">
+      <div class = "col-25">
+        <span class="current-text">Current:</span>
+      </div>
+      <div class = "col-75">
+        Recent Tufts University Graduate
+      </div>
+</div>
+
+<div class = "row">
+      <div class = "col-25">
+        <span class="past-text">Past:</span>
+      </div>
+      <div class = "col-75">
+        Embedded SWE Intern @ Draper Laboratory
+      </div>
+</div>
+
+<hr class="content-divider">
+
+
+<span class="current-text">Projects:</span>
+<ul>
+    {% for project in site.projects %}
+    {% unless project.draft == true or project.series %}
+    <li class="post-item">
+        <a class="post-title" href="{{ project.url }}"><span><u>{{ project.title }}</u></span></a>
+        <div class="post-date"><i>{{ project.date | date: '%B %Y' }}</i></div>
+    </li>
+    {% endunless %}
+    {% endfor %}   
+</ul>
 

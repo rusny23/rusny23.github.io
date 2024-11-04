@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include seo.md %}
+    {% include css.md %}
+    <link rel="alternate" type="application/rss+xml" title="Blog" href="{{ site.url }}/feed.xml" />
+   </head>
+  <body>
+    <div class="blogcontents">
+        {% include navbar.md %}
+        <h1 class="post-title">{{ page.title }}</h1>
+        {% if page.index != true %}
+            <div class = "row">
+                    <div class = "col-25">
+                        <span style="color:gray">Date:</span>
+                    </div>
+                    <div class = "col-75">
+                        <div class="post-inline-date"><i>{{ page.date | date: '%B %Y' }}</i></div>
+                    </div>
+            </div>
+        {% endif %}
+        {% if page.course %}
+            <div class = "row">
+                <div class = "col-25">
+                    <span style="color:gray">Course:</span>
+                </div>
+                <div class = "col-75">
+                    <div class="post-inline-date"><i> {{ page.course }} </i></div>
+                </div>
+            </div>
+        {% endif %}
+        {% if page.github_repo %}
+            <div class = "row">
+                <div class = "col-25">
+                    <span style="color:gray">GitHub Repo:</span>
+                </div>
+                <div class = "col-75">
+                    <a href="{{ page.github_repo }}" target="_blank">Incident Detection</a>
+                </div>
+            </div>
+            
+        {% endif %}
+
+        {% if page.partners %}
+            {% assign partner_list = page.partners | split: ", " %}
+            {% assign num_partners = partner_list | size %}
+            {% if num_partners > 1 %}
+                <div class = "row">
+                    <div class = "col-25">
+                        <span style="color:gray">Teammates:</span>
+                    </div>
+                    <div class = "col-75">
+                        <i>{{ partner_list | join: ", "}}</i>
+                    </div>
+                </div>
+            {% else %}
+                <div class = "row">
+                    <div class = "col-25">
+                        <span style="color:gray">Partner:</span>
+                    </div>
+                    <div class = "col-75">
+                        <i>{{ partner_list | join: ", "}}</i>
+                    </div>
+                </div>
+            {% endif %}
+        {% endif %}          
+
+        <div class="container">
+            <h2>Description</h2>
+            {{ content }}
+        </div>
+        {% include footer.md %}
+    </div>
+  </body>
+</html>        
