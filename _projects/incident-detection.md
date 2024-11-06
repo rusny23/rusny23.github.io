@@ -3,10 +3,11 @@ title: Incident Detection Alarm
 date: March 2022
 course: CS116 - Introduction to Cybersecurity
 github_repo: https://github.com/rusny23/Incident-Detection-Alarm/tree/main
+link_name: Incident Detection
 layout: project
 ---
 
-This Python script represents a Network Sniffer for Basic Vulnerabilities Detection. It utilizes the `scapy` library to sniff network traffic and detect basic vulnerabilities based on packet analysis. It can operate in real-time on a network interface or analyze a pre-recorded PCAP file.
+This Python script represents a Network Sniffer for basic vulnerability detection. It utilizes the `scapy` library to sniff network traffic and detect basic vulnerabilities based on packet analysis. It can operate in real-time on a network interface or analyze a pre-recorded PCAP file.
 
 ### Features:
 - **Vulnerability Detection**: The script identifies several types of network scans and credential leaks:
@@ -31,11 +32,11 @@ This Python script represents a Network Sniffer for Basic Vulnerabilities Detect
   - `-i <interface>`: Specify the network interface to sniff on (default is `eth0`).
   - `-r <pcapfile>`: Specify a PCAP file to read instead of live sniffing.
 
-### Examples
+### Examples:
 To sniff on interface `eth0`: `python sniffer.py -i eth0` <br>
 To analyze a PCAP file, use the following command: `python sniffer.py -r example.pcap`
 
-### Output
+### Output:
 Detected incidents are printed in the format:<br>
   ALERT #{incident_number}: {incident_detected} is detected from {source_IP} {extra}
  <br> Where: <br>

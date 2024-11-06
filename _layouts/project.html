@@ -11,31 +11,31 @@
         <h1 class="post-title">{{ page.title }}</h1>
         {% if page.index != true %}
             <div class = "row">
-                    <div class = "col-25">
+                    <div class = "col-20">
                         <span style="color:gray">Date:</span>
                     </div>
-                    <div class = "col-75">
+                    <div class = "col-80">
                         <div class="post-inline-date"><i>{{ page.date | date: '%B %Y' }}</i></div>
                     </div>
             </div>
         {% endif %}
         {% if page.course %}
             <div class = "row">
-                <div class = "col-25">
+                <div class = "col-20">
                     <span style="color:gray">Course:</span>
                 </div>
-                <div class = "col-75">
+                <div class = "col-80">
                     <div class="post-inline-date"><i> {{ page.course }} </i></div>
                 </div>
             </div>
         {% endif %}
         {% if page.github_repo %}
             <div class = "row">
-                <div class = "col-25">
+                <div class = "col-20">
                     <span style="color:gray">GitHub Repo:</span>
                 </div>
-                <div class = "col-75">
-                    <a href="{{ page.github_repo }}" target="_blank">Incident Detection</a>
+                <div class = "col-80">
+                    <a href="{{ page.github_repo }}" target="_blank"> {{page.link_name}} </a>
                 </div>
             </div>
             
@@ -46,19 +46,19 @@
             {% assign num_partners = partner_list | size %}
             {% if num_partners > 1 %}
                 <div class = "row">
-                    <div class = "col-25">
+                    <div class = "col-20">
                         <span style="color:gray">Teammates:</span>
                     </div>
-                    <div class = "col-75">
+                    <div class = "col-80">
                         <i>{{ partner_list | join: ", "}}</i>
                     </div>
                 </div>
             {% else %}
                 <div class = "row">
-                    <div class = "col-25">
+                    <div class = "col-20">
                         <span style="color:gray">Partner:</span>
                     </div>
-                    <div class = "col-75">
+                    <div class = "col-80">
                         <i>{{ partner_list | join: ", "}}</i>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
         {% endif %}          
 
         <div class="container">
-            <h2>Description</h2>
+            <h2>Description:</h2>
             {{ content }}
         </div>
         {% include footer.md %}
